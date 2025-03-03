@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(27, 11, 11);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  background: #251919;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#search {
+  width: 90%;
+  max-width: 400px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+
+.songs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  -ms-overflow-style: none;
+}
+
+.songs::-webkit-scrollbar {
+  display: none;
+}
+
+.song-card {
+  flex: 0 0 auto;
+  width: 45%;
+  max-width: 200px;
+  background-color: rgb(36, 34, 34);
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.song-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.artist {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.artist img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#music-controller {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#music-info {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+#music-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#progress-bar-container {
+  width: 100%;
+  height: 5px;
+  background: #444;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background: limegreen;
+  transition: width 0.2s ease;
+}
+
+#controls {
+  display: flex;
+  gap: 10px;
+}
+
+#controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .song-card {
+    width: 90%;
+  }
+
+}
